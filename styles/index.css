@@ -1,0 +1,180 @@
+body {
+  font-size: 16px;
+  position: relative
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
+}
+
+header > h1 {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#likedList {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#config {
+  display: none;
+  margin: 15px;
+}
+
+.navDiv {
+  font-size: 2rem;
+}
+
+nav {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.mainCards{
+  max-width: 200px;
+  margin: 10px;
+  position: relative;
+}
+
+.imgWrapper:hover .likeImg {
+  display: block;
+  animation-name: showLike;
+  animation-duration: 1s; 
+  width: 100%;
+}
+
+@keyframes showLike {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+
+.likeImg {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: rgba(255,255,255,0.7);
+  /* width: 0%; */
+  top: 0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: width 1s;
+  cursor: pointer;
+}
+
+
+.mainTitles {
+  text-align: center;
+  font-weight: bold;
+}
+
+.mainDates {
+  text-align: center;
+}
+
+#bgBlur, #configBgBlur{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.7)
+}
+
+#modal {
+  position: fixed;
+  width: 80%;
+  background-size: cover;
+  padding: 0;
+  top: 15%;
+  left: 10%;
+}
+
+#configModal {
+  position: fixed;
+  width: 80%;
+  top: 15%;
+  left: 10%;
+}
+
+.entry {
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  margin-top:15px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  cursor: grab;
+  list-style-type: none;
+}
+
+#modalMask {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+#modalMask > button {
+  padding: 20px;
+  color: white;
+}
+
+#modalContent {
+  display: flex;
+  margin: 30px;
+}
+
+
+#modalDescription {
+  margin-left: 30px;
+  color: white;
+}
+
+#modalDescription > h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#modalDescriptionTags{
+  margin-top: 10px;
+}
+
+#modalDescriptionTags > span {
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#modalDescriptionPublisher {
+  width: 100%;
+  background: rgba(255,255,255,0.7);
+  font-size: 0.7rem;
+  color: black;
+}
+
+#modalDescriptionPublisher > span {
+  margin: 10px;
+}
+
+#modalDescriptionPublisher > img {
+  margin: 10px;
+}
+
+/* Bootstrap */
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
